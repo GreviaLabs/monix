@@ -1,0 +1,18 @@
+# Activate rewrite URL
+
+RewriteEngine On
+
+# ----------------------------------------------------
+# simple
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^([^\.]+)$ index.php/$1.php [NC,L]
+
+# ----------------------------------------------------
+# advanced
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^/]+)/$ $1.php
+# RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+# RewriteRule (.*)$ /$1/ [R=301,L]

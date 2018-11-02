@@ -1,0 +1,14 @@
+Senin 22 Oktober 2018
+- mapping HMVC architecture
+- create alternative folder mvc
+- create config core handler
+- create Monix core class 
+
+Friday 19 oktober 2018
+- create project name Monix, after a while searching data
+- setting repository for Monix in bitbucket
+
+Thursday 18 oktober 2018
+- setup scrape project twitter in native php
+- been wondering, its hard to mapping url config in native, why not using frameworks
+- initiate project mvc / hmvc codename Monix
