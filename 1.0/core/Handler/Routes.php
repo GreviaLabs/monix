@@ -45,7 +45,8 @@ class Routes extends Monix
 		if (! isset($this->list_routes)) 
 			exception_handle('ROUTES_NOT_CONFIGURED', $this_file_path, LINE);
 		
-		$request_url = 'http://' . apache_getenv("HTTP_HOST") . apache_getenv("REQUEST_URI");
+		// $request_url = 'http://' . apache_getenv("HTTP_HOST") . apache_getenv("REQUEST_URI");
+		$request_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		
 		// 9 juli ijin 1 hari
 		// if from here return : /Applications/AMPPS/www/monix/1.0/core/Handler
