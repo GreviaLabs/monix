@@ -6,7 +6,7 @@ $dir = __DIR__ . '/';
 require_once('config/constant.php');
 
 // Exception handler [DONE]
-require_once($dir.'exception/exception.php');
+require_once('core/Exception/Exception.php');
 
 // Helper load in folder root->helpers [DONE]
 require_once('core/Handler/Helper.php');
