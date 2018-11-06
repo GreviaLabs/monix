@@ -13,7 +13,7 @@ class Monix
     // core engine framework
     public function __construct()
     {
-        echo 'start construct from monix';
+        // echo 'start construct from monix';
         // die;
     }
 
@@ -42,8 +42,29 @@ class Monix
         die;
     }
 
+    /*
+     * Load View from folder: view
+     * ---------------
+     * USAGE $path:
+     * - folder inside path can be used as . (dot) or / (slash)
+     * - file extension must be .php
+     * 
+     * USAGE $data:
+     * - type data must be array
+     * - every key value will be variable & val will be value of variable
+     * 
+     * example : loadView('modular.index');
+     * will be find folder views, then folder modular and file index.php
+     */
     public function loadView($path = null, $data = array())
     {
+        // set variable for exception handle
+        $this_file_path = 'Handler' . DS . 'Monix.php' ;
+        
+        // check path contain . or not
+        if (isset($path) && strpos($path,'.') !== FALSE) {
+            $path = str_replace('.',DS,$path);
+        }
 
         $base_path = str_replace('core' . DS . 'Handler','', __DIR__ );
         $view_base_path = $base_path . 'views' . DS;
@@ -56,7 +77,14 @@ class Monix
             }
         }
 
-        $readfile = include_once($view_base_path . $path . '.php');
+        $readfile = $view_base_path . $path . '.php';
+
+        if (file_exists($readfile)) {
+            $readfile = include_once($readfile);
+        } else {
+            // exception file not exist
+            exception_handle('VIEW_FILE_NOT_FOUND', $this_file_path);
+        }
         return $data;
     }
 

@@ -70,7 +70,7 @@ class Routes extends Monix
 
 				$keyuri = base_url().$keyuri;
 				// $keyuri = base_url();
-				// read home url from routes /
+                // read home url from routes /
 				if ($keyuri == '/' && $request_url == base_url() ) 
 				{
 					// $include_path = $base_path . 'views/' . $route . '.php';
@@ -126,14 +126,9 @@ class Routes extends Monix
 
 				}
 
-				// debug('keyuri: '.$keyuri);
-				// debug('req_url: '.$request_url);
-                // debug(HR);
-
 				// read other url
 				if ($keyuri == $request_url || strpos($keyuri,$request_url) !== FALSE) 
 				{
-					//strpos
 					// load file
 					// debug('load file from hmvc folder' . HR);
 					// debug($this->hmvc_mode);
@@ -178,13 +173,14 @@ class Routes extends Monix
 					}
 					else 
 					{
-						// ----------------------
+                        // debug
+                        // ----------------------
 						// start regular config
 						// not hmvc
 						// $include_path = $base_path . 'hmvc/' . ;
 						// debug($include_path . HR);
                         // $ctrl = $keyuri;
-                        debug('regular architecture' . HR);
+                        // debug('regular architecture' . HR);
 						$target = $temp = NULL;
 
 						$temp = explode('@',$route);
@@ -192,13 +188,11 @@ class Routes extends Monix
 						$target['method'] = $temp[1];
 						
 						// load file controller target
-						// $include_pathctrl = $base_path . 'controllers/' . $target['ctrl'] . '.php';
 						$include_pathctrl = $base_path . 'controllers' . DS . $target['ctrl'] . '.php';
 						if (file_exists($include_pathctrl)) 
 						{
 							$is_route_found = TRUE;
 
-							// debug('include_pathctrl exist' . HR);
                             include_once($include_pathctrl);
 
 							// create object controller;
@@ -234,8 +228,9 @@ class Routes extends Monix
         // Error: Route not found
         if (! $is_route_found) {
             // Exception route not found or throw 404 here ??
-			// debug('error routes not found');
-			exception_handle('ROUTES_NOT_FOUND', $this_file_path, __LINE__);
+            // debug('error routes not found');
+            $this->loadView('error.404');
+			// exception_handle('ROUTES_NOT_FOUND', $this_file_path, __LINE__);
             // throw new Exception('ayamaaa');
             die;
         }

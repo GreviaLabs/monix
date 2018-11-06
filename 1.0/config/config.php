@@ -9,4 +9,12 @@
 // $config['hmvc_mode'] = TRUE;
 $config['hmvc_mode'] = FALSE;
 
+/* 
+ * Show config mode
+ * if set TRUE then will show information on footer about 
+ * data config & other to easy debug 
+*/
+$config['show_config_mode'] = FALSE;
+
+
 ?>

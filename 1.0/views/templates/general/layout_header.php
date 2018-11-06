@@ -1,9 +1,14 @@
+<?php
+$env = env();
+$base_url = base_url();
+// debug($env);
+?>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<title>Halaman Scrape Twitter</title>
+	<title><?php echo (isset($PAGE_TITLE)) ? $PAGE_TITLE : $env['APP_PAGE_TITLE'] ?></title>
 	
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +32,7 @@
 <div>
     <nav class="navbar navbar-expand-lg navbar-dark indigo">
 
-        <a class="navbar-brand" href="#">Glabs</a>
+        <a class="navbar-brand" href="#"><?php echo (isset($APP_NAME)) ? $APP_NAME : $env['APP_NAME'] ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,10 +42,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="preview.php">Preview scrape result <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="scrape_form.php">Input data scrape<span class="sr-only">(current)</span></a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>about">About<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>architecture">Architecture<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>documentation">Doc<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>ayamgoreng">ayamgoreng<span class="sr-only">(current)</span></a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href=""><span class="sr-only">(current)</span></a></li> -->
             </ul>
             <span class="navbar-text white-text">
                 
@@ -48,6 +54,8 @@
         </div>
     </nav>
 </div>
+
+<div style="padding-top:50px"></div>
 
 <div class="container">
     <div class="row">

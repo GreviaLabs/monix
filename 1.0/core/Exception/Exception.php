@@ -30,10 +30,10 @@ function exception_handle($code = NULL, $attr = NULL, $_line = NULL)
 		
 		// ----------------------------------------------------
 		case 'VIEW_FILE_NOT_SET';
-			$message = 'Invalid code of exception ';
+			$message = 'Invalid view not set exception ';
 			break;
 		case 'VIEW_FILE_NOT_FOUND';
-			$message = 'Invalid code of exception ';
+			$message = 'Invalid view not found exception ';
 			break;
 			
 		// ----------------------------------------------------

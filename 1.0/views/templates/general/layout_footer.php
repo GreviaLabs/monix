@@ -1,9 +1,9 @@
         
     </div>
     <div>
-        <div class="text-center">
+        <div class="text-right small">
             <hr/>
-            &copy; made by Grevialabs
+            &copy; powered with Monix 1.0<br/>by <a target="http://grevialabs.com">Glabs</a>
         </div>
     </div>
 </div>
