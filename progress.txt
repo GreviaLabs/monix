@@ -1,3 +1,9 @@
+Kamis 8 November 2018
+- add example page show db manipulation; 
+- Monix add prop db for db manipulation; 
+- add Model read and folder; 
+- remove menu ayamgoreng
+
 Senin 22 Oktober 2018
 - mapping HMVC architecture
 - create alternative folder mvc

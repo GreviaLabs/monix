@@ -204,7 +204,9 @@ class Routes extends Monix
 							} else {
                                 // check if controller found && method exist
                                 if (method_exists($obj, $target['method'])) {
-                                    $obj->{$target['method']}();
+									$obj->{$target['method']}();
+									
+									// $obj->db(new Db());
                                 } else {
 									// debug('exception controller exist but method invalid',1);
 									exception_handle('CONTROLLER_METHOD_NOT_VALID', $this_file_path);

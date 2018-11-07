@@ -9,12 +9,20 @@ class Monix
 {
     public $data;
     public $_data;
+    public $db;
 
     // core engine framework
     public function __construct()
     {
         // echo 'start construct from monix';
         // die;
+        $this->db = new Db();
+    }
+    
+    // prepare var db for class db
+    public function db($db)
+    {
+        $this->db = $db;
     }
 
     // Magic function

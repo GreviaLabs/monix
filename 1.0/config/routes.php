@@ -7,10 +7,11 @@
 
 
 // $routes['/'] = 'ModularCtrl@index';
-$routes['/'] = 'ModularCtrl@about';
+$routes['/'] = 'ModularCtrl@index';
 $routes['readme'] = 'ModularCtrl@readme';
 $routes['about'] = 'ModularCtrl@about';
 $routes['architecture'] = 'ModularCtrl@architecture';
+$routes['example'] = 'ModularCtrl@example';
 $routes['multi/slug'] = 'ModularCtrl@multislug';
 // $routes['/hello'] = 'ModularCtrl@hello';
 $routes['hello'] = 'ModularCtrl@hello';

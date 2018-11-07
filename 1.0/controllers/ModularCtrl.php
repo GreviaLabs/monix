@@ -1,5 +1,5 @@
 <?php
-class ModularCtrl extends Monix
+class ModularCtrl extends Controller
 {
 
     public $index = 'dari index';
@@ -9,6 +9,8 @@ class ModularCtrl extends Monix
     {
         $this->index = $_index;
         // debug('Hello from constructor Modularctrl'.HR);
+
+        $this->db(new Db());
     }
 
     public function index()
@@ -36,8 +38,23 @@ class ModularCtrl extends Monix
     {
         // debug('kacau',1);
         $param = NULL;
-        $param['PAGE_TITLE'] = 'Tentang Kami';
+        $param['PAGE_TITLE'] = 'Architecture Monix';
         $this->loadView('modular.architecture',$param);        
+    }
+
+    public function doc()
+    {
+        // debug('kacau',1);
+        $param = NULL;
+        $param['PAGE_TITLE'] = 'Dokumentasi';
+        $this->loadView('modular.doc',$param);        
+    }
+
+    public function example()
+    {
+        $param = NULL;
+        $param['PAGE_TITLE'] = 'Example';
+        $this->loadView('modular.example',$param);        
     }
 
     public function hello()

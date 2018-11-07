@@ -10,6 +10,7 @@ class Db
     public $db; // db connect
     public $debug; // enable debugging command lifecycle each event
     public $last_insert_id; // last insert id
+    // public $to_json;
 
     public $dbengine;
     public $dbhost;
@@ -23,15 +24,10 @@ class Db
     public function __construct($option = NULL)
     {
         try {
-            debug('db constructor start');
-            // debug('db finally');
-
+            // debug('db constructor start');
             // $env = env();
             $dbconfig = env();
-            // debug($dbconfig);
-            // debug(HR.'suogoi');
-            // die;
-            // debug($env);
+
             $this->dbengine = $dbconfig['DB_ENGINE'];
             $this->dbhost = $dbconfig['DB_HOST'];
             $this->dbuser = $dbconfig['DB_USER'];
@@ -229,6 +225,11 @@ class Db
                 
     }
 
+    // Alias method resultAll (method pointer)
+    public function result_array() {
+        return $this->resultAll();
+    }
+
     // Get last insert id
     public function lastId()
     {
@@ -292,6 +293,21 @@ class Db
     public function delete($attr = array())
     {
         
+    }
+
+    // return json
+    public function to_json() {
+        return json_encode($this->result);
+    }
+
+    // return array
+    public function to_array() {
+        return ($this->result);
+    }
+
+    // return json
+    public function to_object() {
+        return json_encode($this->result);
     }
 
     // destructor

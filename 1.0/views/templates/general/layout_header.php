@@ -40,12 +40,13 @@ $base_url = base_url();
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo $base_url ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>about">About<span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>architecture">Architecture<span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>documentation">Doc<span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>ayamgoreng">ayamgoreng<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>doc">Doc<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>example">Example<span class="sr-only">(current)</span></a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>ayamgoreng">ayamgoreng<span class="sr-only">(current)</span></a></li> -->
                 <!-- <li class="nav-item"><a class="nav-link" href=""><span class="sr-only">(current)</span></a></li> -->
             </ul>
             <span class="navbar-text white-text">

@@ -2,6 +2,12 @@
 // require_once( __DIR__ . '../Monix.php');
 require_once('Monix.php');
 
+class Controller extends Monix {
+    public function __construct() {
+        $this->db(new Db());
+    }
+}
+
 // Scan folder controllers
 $dir = 'controllers';
 $listdir = scandir($dir);
@@ -15,5 +21,6 @@ if (! empty($listdir))
             require_once($dir . '/' . $ctrl);
     }
 }
+
 
 ?>
