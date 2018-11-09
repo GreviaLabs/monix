@@ -2,7 +2,7 @@
 $this->loadView('templates.general.layout_header');
 
 // $listdata = $this->model->
-$q = "SELECT * FROM grv_member LIMIT 7";
+$q = "SELECT member_id,full_name,name,gender,linkedin FROM grv_member LIMIT 7";
 // $db = new Db();
 // $db->query($q);
 // $listdata = $db->resultAll()->to_json();
@@ -10,12 +10,15 @@ $q = "SELECT * FROM grv_member LIMIT 7";
 // this ok
 $this->db->query($q);
 $listdata = $this->db->result_array();
-$listdata = $this->db->to_json(); 
-
+// $listdata = $this->db->to_json(); 
+// unset($listdata['about_me']);
+// unset($listdata['secure_notes']);
+// unset($listdata['CreatorDateTime']);
+$listdata = json_encode($listdata);
 // this cannot do
 // $listdata = $this->db->query($q)->resultAll();
 
-debug($listdata);
+echo ($listdata).BR;
 // debug($this->db->last_query());
 ?>
 

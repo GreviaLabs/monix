@@ -42,6 +42,14 @@ class ModularCtrl extends Controller
         $this->loadView('modular.architecture',$param);        
     }
 
+    public function vue()
+    {
+        // debug('kacau',1);
+        $param = NULL;
+        $param['PAGE_TITLE'] = 'Vue Monix';
+        $this->loadView('modular.vue',$param);        
+    }
+
     public function doc()
     {
         // debug('kacau',1);

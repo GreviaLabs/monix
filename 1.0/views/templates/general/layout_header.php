@@ -22,7 +22,7 @@ $base_url = base_url();
 		<!-- Material Design Bootstrap -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css?05082018" rel="stylesheet">
 		
-		<link href="http://grevialabs.com/public/css/style_default.css?05082018" rel="stylesheet">
+		<link href="http://www.grevia.com/asset/css/style.css?05082018" rel="stylesheet">
 		
 	<!-- Package1 End -->
 	
@@ -45,7 +45,8 @@ $base_url = base_url();
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>about">About<span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>architecture">Architecture<span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>doc">Doc<span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>example">Example<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>example">Example curl<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>vue">Vue<span class="sr-only">(current)</span></a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>ayamgoreng">ayamgoreng<span class="sr-only">(current)</span></a></li> -->
                 <!-- <li class="nav-item"><a class="nav-link" href=""><span class="sr-only">(current)</span></a></li> -->
             </ul>

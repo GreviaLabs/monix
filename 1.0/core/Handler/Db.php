@@ -206,7 +206,14 @@ class Db
 
             case 'mysqli':
                 // $result = $this->query->fetch_array(MYSQLI_ASSOC);
-                $this->result = $this->query->fetch_array(MYSQLI_ASSOC);
+
+                // while($row = mysqli_fetch_array($this->query)) {
+                while($row = $this->query->fetch_array(MYSQLI_ASSOC)) {
+                    $result[] = $row;
+                }
+
+                // $this->result = $this->query->fetch_array(MYSQLI_ASSOC);
+                $this->result = $result;
                 break;
                 
             case 'pdo':

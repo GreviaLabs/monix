@@ -1,3 +1,11 @@
+Monix 1.0
+---------------------------
+Friday 9 November 2018
+- add vue js page example load data 
+- add layout header vue 
+- Db repair fetch_array return single to return list
+- add routes,ModularCtrl
+
 Kamis 8 November 2018
 - add example page show db manipulation; 
 - Monix add prop db for db manipulation; 
