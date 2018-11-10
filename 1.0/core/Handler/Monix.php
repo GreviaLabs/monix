@@ -11,18 +11,29 @@ class Monix
     public $_data;
     public $db;
 
+    // load class session
+    public $session;
+
     // core engine framework
-    public function __construct()
-    {
+    public function __construct() {
         // echo 'start construct from monix';
         // die;
         $this->db = new Db();
+        $this->session = new Session();
+        $this->cookies = new Cookies();
     }
     
     // prepare var db for class db
-    public function db($db)
-    {
-        $this->db = $db;
+    public function db($_db) {
+        $this->db = $_db;
+    }
+
+    public function session($_session) {
+        $this->session = $_session;
+    }
+
+    public function cookies($_cookies) {
+        $this->session = $_cookies;
     }
 
     // Magic function
@@ -44,8 +55,7 @@ class Monix
     // setter for $this->data
     public function setdata($param = array()) { $this->_data = $param; }
 
-    public function curl()
-    {
+    public function curl() {
         echo 'start curl from monix'.HR;
         die;
     }
@@ -76,10 +86,8 @@ class Monix
 
         $base_path = str_replace('core' . DS . 'Handler','', __DIR__ );
         $view_base_path = $base_path . 'views' . DS;
-        if (! empty($data)) 
-        {
-            foreach ($data as $k => $val) 
-            {
+        if (! empty($data)) {
+            foreach ($data as $k => $val) {
                 // declare dynamic variable
                 ${"$k"} = $val;
             }

@@ -13,6 +13,7 @@ $routes['about'] = 'ModularCtrl@about';
 $routes['architecture'] = 'ModularCtrl@architecture';
 $routes['example'] = 'ModularCtrl@example';
 $routes['vue'] = 'ModularCtrl@vue';
+$routes['order-domain'] = 'ModularCtrl@order_domain';
 $routes['multi/slug'] = 'ModularCtrl@multislug';
 // $routes['/hello'] = 'ModularCtrl@hello';
 $routes['hello'] = 'ModularCtrl@hello';

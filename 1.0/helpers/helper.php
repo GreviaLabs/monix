@@ -146,4 +146,27 @@ function loadview($url)
 	require_once(__DIR__ .''.$url);
 }
 
+function print_message($string, $type = 'info'){
+	$return = '';
+	// if ($type == "info") {
+		// $return = '<div class="alert alert-info b"><i class="fa fa-exclamation-circle"></i> &nbsp;&nbsp;'.$string.'</div>';
+	// }
+	// if ($type == "success") {
+		// $return = '<div class="alert alert-success b"><i class="fa fa-check-circle"></i> &nbsp;&nbsp;'.$string.'</div>';
+	// }
+	// if ($type == "error") {
+		// $return = '<div class="alert alert-danger b"><i class="fa fa-remove"></i> &nbsp;&nbsp;'.$string.'</div>';
+	// }
+	
+	if ($type == "info") {
+		$return = '<div class="message-info b"> <i class="fa fa-exclamation-circle"></i> &nbsp;&nbsp;'.$string.'</div>';
+	}
+	if ($type == "success") {
+		$return = '<div class="message-success b"><i class="fa fa-check-circle"></i> &nbsp;&nbsp;'.$string.'</div>';
+	}
+	if ($type == "error") {
+		$return = '<div class="message-danger b"><i class="fa fa-remove"></i> &nbsp;&nbsp;'.$string.'</div>';
+	}
+	return $return;
+}
 ?>

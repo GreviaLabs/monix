@@ -16,5 +16,8 @@ $config['hmvc_mode'] = FALSE;
 */
 $config['show_config_mode'] = FALSE;
 
-
+/*
+ * Load core component
+ */
+$config['core'] = array();
 ?>

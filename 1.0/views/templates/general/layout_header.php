@@ -1,7 +1,9 @@
 <?php
 $env = env();
 $base_url = base_url();
-// debug($env);
+
+// cache asset
+$jsv = '?20181107';
 ?>
 <html>
 <head>
@@ -16,13 +18,14 @@ $base_url = base_url();
 	
 	<!-- Package1 Start -->
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?05082018">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css<?php echo $jsv?>">
 		<!-- Bootstrap core CSS -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css?05082018" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css<?php echo $jsv?>" rel="stylesheet">
 		<!-- Material Design Bootstrap -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css?05082018" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css<?php echo $jsv?>" rel="stylesheet">
 		
-		<link href="http://www.grevia.com/asset/css/style.css?05082018" rel="stylesheet">
+		<!-- <link href="http://www.grevia.com/asset/css/style.css?05082018" rel="stylesheet"> -->
+		<link href="<?php echo $base_url?>asset/css/style.css<?php echo $jsv?>" rel="stylesheet">
 		
 	<!-- Package1 End -->
 	
@@ -47,6 +50,7 @@ $base_url = base_url();
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>doc">Doc<span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>example">Example curl<span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>vue">Vue<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>order-domain">Order Domain<span class="sr-only">(current)</span></a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="<?php echo $base_url ?>ayamgoreng">ayamgoreng<span class="sr-only">(current)</span></a></li> -->
                 <!-- <li class="nav-item"><a class="nav-link" href=""><span class="sr-only">(current)</span></a></li> -->
             </ul>

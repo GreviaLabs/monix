@@ -40,10 +40,12 @@ $listdata = $this->db->to_json();
 $this->loadView('templates.general.layout_footer');
 ?>
 <script type="text/javascript">
+var data;
+data = <?php echo $listdata ?>;
 var app = new Vue({
   el: '#app',
   data: {
-    listdata: <?php echo $listdata ?>,
+    listdata: data,
     is_member: 1,
     is_not_member: 0,
     

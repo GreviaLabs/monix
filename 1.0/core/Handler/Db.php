@@ -103,6 +103,9 @@ class Db
         }
     }
 
+    function esc($str) {   return mysql_real_escape_string($str); }
+	function escape($str){ return mysql_real_escape_string($str); } 
+
     public function query($_sql = NULL)
     {
         if ($this->debug) debug('db query start');

@@ -44,10 +44,16 @@ class ModularCtrl extends Controller
 
     public function vue()
     {
-        // debug('kacau',1);
         $param = NULL;
         $param['PAGE_TITLE'] = 'Vue Monix';
         $this->loadView('modular.vue',$param);        
+    }
+
+    public function order_domain()
+    {
+        $param = NULL;
+        $param['PAGE_TITLE'] = 'Order Domain';
+        $this->loadView('modular.order-domain',$param);        
     }
 
     public function doc()
