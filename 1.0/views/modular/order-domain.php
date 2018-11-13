@@ -57,7 +57,7 @@ if ($_POST)
 {
     $post;
     $post = $_POST;
-    if (isset($post['btn_submit'])) {
+    if (isset($post['hdn_submit'])) {
         //do curl 
         // $tokend = get_tokend();
         // debug($tokend,1);
@@ -90,15 +90,29 @@ $this->loadView('templates.general.layout_header');
 
     <?php if (isset($message)) echo $message; ?>
 
-    <form method="post">
+    <form method="post" id="frm_order">
         <div class="col-sm-12">
             Please input your domain<br/>
             <input name="f_domain" class="input br wdtFul" value="<?php if (isset($_POST['f_domain'])) echo $_POST['f_domain']; ?>" required />
 
-            <input type="submit" name="btn_submit" value="Check" class="btn btn-success btn-sm" />
+            <input type="hidden" name="hdn_submit" value="1" />
+			<div id="loading" class="hide"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></div>
+			<button id="btn_submit" name="btn_submit" value="Check" class="btn btn-success btn-sm">Submit</button>
         </div>
     </form>
 </div>
 <?php 
 $this->loadView('templates.general.layout_footer');
 ?>
+<script>
+$('#loading').hide();
+$(document).ready(function(){
+	// console.log('mantab');
+	
+	$("#frm_order").submit(function (e) {
+		$('#btn_submit').hide();
+		$('#loading').show();
+	});
+	
+})
+</script>
