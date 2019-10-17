@@ -17,6 +17,7 @@ $routes['order-domain'] = 'ModularCtrl@order_domain';
 $routes['multi/slug'] = 'ModularCtrl@multislug';
 // $routes['/hello'] = 'ModularCtrl@hello';
 $routes['hello'] = 'ModularCtrl@hello';
+$routes['tablefixed'] = 'ModularCtrl@tablefixed';
 // $routes['/modular/(any)'] = 'ModularCtrl@$1';
 
 // return $routes;

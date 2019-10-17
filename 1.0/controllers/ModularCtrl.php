@@ -78,5 +78,12 @@ class ModularCtrl extends Controller
 
         // die;
     }
+	
+	public function tablefixed()
+    {
+        // debug('kacau',1);
+        $param = NULL;
+		$this->loadView('modular.tablefixed',$param);         
+    }
 }
 ?>
